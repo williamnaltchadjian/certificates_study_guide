@@ -1,0 +1,17 @@
+site_name: AWS Documentation Hub
+theme:
+  name: material
+  palette:
+    # Cores que lembram a AWS
+    - scheme: default
+      primary: orange
+      accent: indigo
+  features:
+    - navigation.tabs
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
