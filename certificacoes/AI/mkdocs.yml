@@ -1,17 +1,48 @@
-site_name: AWS Documentation Hub
+site_name: AWS Certification Study Guide
+site_description: Guia de estudos para certificações AWS na área de IA/ML
+site_author: William
+
 theme:
   name: material
   palette:
-    # Cores que lembram a AWS
     - scheme: default
       primary: orange
       accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.top
     - search.highlight
+    - search.suggest
     - content.code.copy
+    - content.tooltips
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+nav:
+  - Início: index.md
+  - Fundamentos:
+      - IA & ML: 1.Fundamentals_IA_Machine_Learning.md
+      - IA Generativa: 2.Fundamentos de ia generativa.md
+      - Prompt Engineering: 3.Prompt Enginnering.md
+      - Responsabilidades em IA: 4.Responsibilities_AI.md
+  - Serviços AWS:
+      - Amazon Bedrock: Servicos/bedrock.md
+      - Amazon SageMaker: Servicos/sagemaker.md
+      - Amazon Q Developer: Servicos/amazon_q_developer.md
+      - Outros Serviços: Servicos/outros.md
