@@ -41,6 +41,8 @@ nav:
       - IA Generativa: 2.Fundamentos de ia generativa.md
       - Prompt Engineering: 3.Prompt Enginnering.md
       - Responsabilidades em IA: 4.Responsibilities_AI.md
+      - Aplicação de Modelos de Fundação: 5.Aplicacao de Modelos de fundacao.md
+      - Serviços de IA: 6.Servicos de IA.md
   - Serviços AWS:
       - Amazon Bedrock: Servicos/bedrock.md
       - Amazon SageMaker: Servicos/sagemaker.md

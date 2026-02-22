@@ -97,4 +97,39 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 - **Clarify** – Detecção de viés e explicabilidade  
 - **Model Cards** – Documentação estruturada do modelo  
 - **Model Dashboard** – Visão centralizada de modelos  
-- **Role Manager** – Gerenciamento de permissões (IAM)  
+- **Role Manager** – Gerenciamento de permissões (IAM) 
+
+---
+
+## 🚀 Model Deployment no Amazon SageMaker
+
+### 📦 Opções de Deploy
+
+| Opção | Quando Usar | Característica Principal | Exemplo de Cenário |
+| :--- | :--- | :--- | :--- |
+| Real-Time Inference | Predições imediatas e contínuas | Endpoint persistente, baixa latência | API que responde uma previsão por requisição |
+| Serverless Inference | Tráfego irregular com picos | Escala automática, aceita cold start | Aplicação com uso esporádico |
+| Asynchronous Inference | Payload grande (até 1GB) ou processamento longo | Processamento em segundo plano | Análise de vídeos ou documentos grandes |
+| Batch Transform | Inferência em dataset completo | Processamento em lote | Gerar previsões para milhões de registros |
+
+### ⚙️ Otimização e Gerenciamento
+
+| Recurso | Para que Serve | Quando Usar |
+| :--- | :--- | :--- |
+| SageMaker Edge Manager | Gerenciar modelos em dispositivos edge | Câmeras, robôs, mobile |
+| SageMaker Neo | Otimizar modelo para diferentes hardwares | Melhorar performance em Android, Linux, Windows |
+
+### 🎯 Essência para Prova
+
+🔹 Predição imediata → Real-Time
+
+🔹 Tráfego imprevisível → Serverless
+
+🔹 Arquivo grande / processamento longo → Asynchronous
+
+🔹 Dataset inteiro → Batch Transform
+
+🔹 Dispositivo edge → Edge Manager
+
+🔹 Otimização para hardware → Neo
+
