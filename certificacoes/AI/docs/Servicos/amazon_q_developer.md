@@ -1,10 +1,10 @@
-# ☁️ AWS Documentation: Amazon Q
+# AWS Documentation: Amazon Q
 
 Este repositório centraliza o conhecimento técnico sobre o Amazon Q e seus diferentes serviços.
 
 ---
 
-## 🧠 Introdução ao Amazon Q
+## Introdução ao Amazon Q
 
 O Amazon Q é o assistente de IA generativa da AWS voltado para:
 
@@ -16,7 +16,7 @@ O Amazon Q é o assistente de IA generativa da AWS voltado para:
 
 ---
 
-## 🟣 Amazon Q Business
+## Amazon Q Business
 
 O Amazon Q Business é um assistente de IA para empresas.
 
@@ -25,17 +25,17 @@ O Amazon Q Business é um assistente de IA para empresas.
 * Conecta-se a sistemas como SharePoint, Salesforce, S3 etc.
 * Usa RAG para buscar informações corporativas
 
-### 🎯 Foco:
+### Foco:
 * Produtividade corporativa
 * Busca inteligente
 * Segurança empresarial
 
-> [!IMPORTANT]
-> Respeita permissões de acesso (controle de segurança).
+!!! important
+    Respeita permissões de acesso (controle de segurança).
 
 ---
 
-## 🛠 Amazon Q Business – Hands On
+## Amazon Q Business – Hands On
 
 Na prática:
 
@@ -49,7 +49,7 @@ Na prática:
 
 ---
 
-## 🟢 Amazon Q Apps
+## Amazon Q Apps
 
 O Amazon Q Apps permite criar aplicações GenAI sem código.
 
@@ -65,7 +65,7 @@ O Amazon Q Apps permite criar aplicações GenAI sem código.
 
 ---
 
-## 🟡 Amazon Q Developer
+## Amazon Q Developer
 
 O Amazon Q Developer é um assistente de IA para desenvolvedores.
 
@@ -76,12 +76,12 @@ O Amazon Q Developer é um assistente de IA para desenvolvedores.
 * Sugestões dentro da IDE
 * Ajuda com serviços AWS
 
-> [!TIP]
-> Aumenta produtividade de desenvolvimento.
+!!! tip
+    Aumenta produtividade de desenvolvimento.
 
 ---
 
-## 🛠 Amazon Q Developer – Hands On
+## Amazon Q Developer – Hands On
 
 Na prática:
 
@@ -93,7 +93,7 @@ Na prática:
 
 ---
 
-## 🔵 Amazon Q for AWS Services
+## Amazon Q for AWS Services
 
 Integração do Amazon Q diretamente no console da AWS.
 
@@ -103,12 +103,12 @@ Integração do Amazon Q diretamente no console da AWS.
 * Diagnosticar problemas
 * Gerar comandos e scripts
 
-> [!NOTE]
-> Funciona como um "assistente inteligente dentro do console".
+!!! note
+    Funciona como um "assistente inteligente dentro do console".
 
 ---
 
-## 🎉 PartyRock
+## PartyRock
 
 O PartyRock é uma plataforma experimental da AWS para criar aplicações GenAI de forma simples.
 
@@ -124,7 +124,7 @@ O PartyRock é uma plataforma experimental da AWS para criar aplicações GenAI 
 
 ---
 
-## 📊 Resumo dos Serviços
+## Resumo dos Serviços
 
 | Serviço | Foco |
 | :--- | :--- |
@@ -136,7 +136,7 @@ O PartyRock é uma plataforma experimental da AWS para criar aplicações GenAI 
 
 ---
 
-## 🧠 O que pode cair na prova
+## O que pode cair na prova
 
 * Q Business usa RAG
 * Q Developer aumenta produtividade de código

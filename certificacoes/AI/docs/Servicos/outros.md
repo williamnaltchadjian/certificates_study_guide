@@ -1,10 +1,10 @@
 
-## 🛡️ AWS Security Services and More
+## AWS Security Services and More
 *Identidade, Conformidade e Governança.*
 
 
 
-### 🔑 Identidade e Acesso (IAM)
+### Identidade e Acesso (IAM)
 * **IAM (Identity and Access Management):** O coração da segurança AWS; controla quem acessa o quê.
 * **IAM Groups:** Coleção de usuários para aplicação de permissões em massa.
 * **IAM Policies:** Documentos **JSON** que definem explicitamente permissões de acesso.
@@ -13,7 +13,7 @@
 
 
 
-### 📋 Segurança, Auditoria e Conformidade
+### Segurança, Auditoria e Conformidade
 | Serviço | Propósito |
 | :--- | :--- |
 | **Amazon Macie** | Usa ML para descobrir dados sensíveis (CPF, cartões) no S3. |
@@ -26,9 +26,9 @@
 
 ---
 
-## 💻 Computação e Armazenamento Core
+## Computação e Armazenamento Core
 
-### 🗄️ Amazon S3 (Simple Storage Service)
+### Amazon S3 (Simple Storage Service)
 Armazenamento de objetos altamente escalável, seguro e durável.
 
 #### **S3 Storage Classes**
@@ -42,13 +42,13 @@ Armazenamento de objetos altamente escalável, seguro e durável.
 | **S3 Glacier Flexible** | Backups tradicionais com custo baixo. | Minutos a Horas |
 | **S3 Glacier Deep Archive** | Retenção de longo prazo (anos) - Classe mais barata. | Até 12 Horas |
 
-### ⚡ Computação
+### Computação
 * **Amazon EC2:** Servidores virtuais na nuvem com controle total do Sistema Operacional.
 * **Amazon Lambda:** Serviço **Serverless** que executa código em resposta a eventos (pague pelo uso).
 
 ---
 
-## 🌐 Networking e Conectividade Privada
+## Networking e Conectividade Privada
 *Mantendo o tráfego fora da internet pública.*
 
 * **VPC Endpoint:** Conecta sua rede privada aos serviços AWS de forma isolada.

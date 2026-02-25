@@ -1,13 +1,13 @@
-# 📋 Referência Rápida — Serviços AWS
+# Referência Rápida — Serviços AWS
 
 Listagem de todos os serviços AWS mencionados neste guia de estudos, organizados por categoria.
 
-> [!NOTE]
-> Este arquivo é gerado a partir da leitura consolidada de todos os domínios do guia de estudos (Domínio 1 ao 5) e dos arquivos de serviços.
+!!! note
+    Este arquivo é gerado a partir da leitura consolidada de todos os domínios do guia de estudos (Domínio 1 ao 5) e dos arquivos de serviços.
 
 ---
 
-## 🧠 Amazon Bedrock
+## Amazon Bedrock
 
 | Serviço / Recurso | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -21,7 +21,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🔬 Amazon SageMaker
+## Amazon SageMaker
 
 ### Desenvolvimento
 
@@ -69,7 +69,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🟣 Amazon Q
+## Amazon Q
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -81,7 +81,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🗄️ Bancos de Dados e Armazenamento Vetorial
+## Bancos de Dados e Armazenamento Vetorial
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -93,7 +93,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🔐 Segurança, Identidade e Conformidade
+## Segurança, Identidade e Conformidade
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -110,7 +110,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🤝 IA Responsável e Revisão Humana
+## IA Responsável e Revisão Humana
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -118,7 +118,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 💾 Armazenamento
+## Armazenamento
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -128,7 +128,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## ⚡ Computação
+## Computação
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -137,7 +137,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 📊 Monitoramento e Observabilidade
+## Monitoramento e Observabilidade
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -145,7 +145,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 🌐 Networking e Conectividade
+## Networking e Conectividade
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
@@ -155,7 +155,7 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-## 📊 Contagem de Serviços por Categoria
+## Contagem de Serviços por Categoria
 
 | Categoria | Qtd. de Serviços |
 | :--- | :---: |
@@ -173,11 +173,11 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
-> [!TIP]
-> **Legenda da coluna Domínio:**
-> - **D1** = Domínio 1 — Fundamentos de IA e ML
-> - **D2** = Domínio 2 — Fundamentos de IA Generativa
-> - **D3** = Domínio 3 — Aplicações de Modelos de Base
-> - **D4** = Domínio 4 — Diretrizes de IA Responsável
-> - **D5** = Domínio 5 — Segurança, Conformidade e Governança
-> - **Serviços** = Encontrado nos arquivos da pasta Serviços
+!!! tip
+    **Legenda da coluna Domínio:**
+    - **D1** = Domínio 1 — Fundamentos de IA e ML
+    - **D2** = Domínio 2 — Fundamentos de IA Generativa
+    - **D3** = Domínio 3 — Aplicações de Modelos de Base
+    - **D4** = Domínio 4 — Diretrizes de IA Responsável
+    - **D5** = Domínio 5 — Segurança, Conformidade e Governança
+    - **Serviços** = Encontrado nos arquivos da pasta Serviços

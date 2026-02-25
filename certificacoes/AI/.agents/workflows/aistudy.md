@@ -1,12 +1,13 @@
 ---
-description: sobre o projeto ai study
+description: Sobre o projeto AI Study
 ---
 
-## sempre quando for executar este projeto, lembre-se de ativar o ambiente virtual
+## Ative o ambiente virtual antes de executar o projeto
 
 ```bash
 source .venv/bin/activate
 ```
-## QUANDO EU PEDIR PARA FORMATAR O PROJETO, FORMATE O TEXTO EM MODO MKDOCS CONFORME O PADRAO DO PROJETO
 
+## Quando eu pedir para formatar o projeto
 
+Formate o texto em modo MkDocs conforme o padrao do projeto.

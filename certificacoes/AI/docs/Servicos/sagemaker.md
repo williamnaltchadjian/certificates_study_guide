@@ -1,12 +1,10 @@
-# ☁️ AWS Documentation: Amazon SageMaker
+# AWS Documentation: Amazon SageMaker
 
 Este documento apresenta um resumo organizado por categoria do Amazon SageMaker, a plataforma ML da AWS.
 
 ---
 
-## 📊 Visão Geral por Fase do Ciclo de ML   
-
-
+## Visão Geral por Fase do Ciclo de ML
 | Fase                            | Serviço                                 | Para que serve                                          | Perfil Ideal             |
 | ------------------------------- | --------------------------------------- | ------------------------------------------------------- | ------------------------ |
 | **No-Code**                     | Amazon SageMaker Canvas                 | Criar modelos sem programar                             | Analistas de negócio     |
@@ -27,11 +25,9 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 | **Painel de Governança**        | Amazon SageMaker Model Dashboard        | Visualizar e monitorar múltiplos modelos                | Gestão                   |
 | **Permissões**                  | Amazon SageMaker Role Manager           | Gerenciar acessos (IAM simplificado)                    | Segurança                |
 
-
-
 ---
 
-## 🎯 Visão Estratégica para Prova
+## Visão Estratégica para Prova
 
 | Se a pergunta falar sobre… | Resposta provável |
 | :--- | :--- |
@@ -51,9 +47,9 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## 🏗️ Arquitetura do Amazon SageMaker
+## Arquitetura do Amazon SageMaker
 
-## 🧑‍💻 Desenvolvimento
+## Desenvolvimento
 
 - **Studio** – IDE completa de Machine Learning  
 - **Canvas** – Plataforma No-Code para criação de modelos  
@@ -62,7 +58,7 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## 📊 Preparação de Dados
+## Preparação de Dados
 
 - **Data Wrangler** – Limpeza e transformação de dados  
 - **Ground Truth** – Rotulagem (labeling) de dados  
@@ -70,7 +66,7 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## ⚙️ Treinamento & Otimização
+## Treinamento & Otimização
 
 - **Autopilot** – AutoML (treinamento automatizado)  
 - **Automatic Model Tuning** – Otimização de hiperparâmetros  
@@ -78,7 +74,7 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## 🚀 Deploy & MLOps
+## Deploy & MLOps
 
 - **Pipelines** – CI/CD para Machine Learning  
 - **Agents** – Automação de endpoints  
@@ -86,13 +82,13 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## 📈 Monitoramento
+## Monitoramento
 
 - **Model Monitor** – Detecta data drift e model drift  
 
 ---
 
-## ⚖️ Governança & Responsible AI
+## Governança & Responsible AI
 
 - **Clarify** – Detecção de viés e explicabilidade  
 - **Model Cards** – Documentação estruturada do modelo  
@@ -101,9 +97,9 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 
 ---
 
-## 🚀 Model Deployment no Amazon SageMaker
+## Model Deployment no Amazon SageMaker
 
-### 📦 Opções de Deploy
+### Opções de Deploy
 
 | Opção | Quando Usar | Característica Principal | Exemplo de Cenário |
 | :--- | :--- | :--- | :--- |
@@ -112,24 +108,18 @@ Este documento apresenta um resumo organizado por categoria do Amazon SageMaker,
 | Asynchronous Inference | Payload grande (até 1GB) ou processamento longo | Processamento em segundo plano | Análise de vídeos ou documentos grandes |
 | Batch Transform | Inferência em dataset completo | Processamento em lote | Gerar previsões para milhões de registros |
 
-### ⚙️ Otimização e Gerenciamento
+### Otimização e Gerenciamento
 
 | Recurso | Para que Serve | Quando Usar |
 | :--- | :--- | :--- |
 | SageMaker Edge Manager | Gerenciar modelos em dispositivos edge | Câmeras, robôs, mobile |
 | SageMaker Neo | Otimizar modelo para diferentes hardwares | Melhorar performance em Android, Linux, Windows |
 
-### 🎯 Essência para Prova
+### Essência para Prova
 
-🔹 Predição imediata → Real-Time
-
-🔹 Tráfego imprevisível → Serverless
-
-🔹 Arquivo grande / processamento longo → Asynchronous
-
-🔹 Dataset inteiro → Batch Transform
-
-🔹 Dispositivo edge → Edge Manager
-
-🔹 Otimização para hardware → Neo
-
+- Predição imediata → Real-Time
+- Tráfego imprevisível → Serverless
+- Arquivo grande / processamento longo → Asynchronous
+- Dataset inteiro → Batch Transform
+- Dispositivo edge → Edge Manager
+- Otimização para hardware → Neo
