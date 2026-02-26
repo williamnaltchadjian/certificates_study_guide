@@ -69,6 +69,42 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 ---
 
+## Serviços de IA da AWS
+
+| Serviço / Recurso | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon Comprehend** | Serviço de NLP que extrai sentimentos, entidades, tópicos e insights de texto | Processamento de Linguagem Natural (NLP) |
+| **Amazon Translate** | Tradução automática neural de textos entre idiomas | NLP / Tradução |
+| **Amazon Transcribe** | Converte áudio em texto automaticamente | Speech-to-Text |
+| **Amazon Polly** | Converte texto em fala realista | Text-to-Speech |
+| **Amazon Rekognition** | Análise de imagens e vídeos (detecção de objetos, rostos, moderação) | Visão Computacional |
+| **Amazon Lex** | Criação de chatbots e assistentes conversacionais | IA Conversacional |
+| **Amazon Personalize** | Sistema de recomendação personalizado baseado em ML | Recomendação |
+| **Amazon Textract** | Extrai texto e dados estruturados de documentos | OCR / Document AI |
+| **Amazon Kendra** | Serviço de busca inteligente com NLP para documentos corporativos | Busca Inteligente |
+| **Amazon Mechanical Turk** | Marketplace para rotulagem de dados e tarefas humanas | Human-in-the-Loop |
+| **Amazon Augmented AI (A2I)** | Permite revisão humana em workflows de ML | Human-in-the-Loop |
+| **Amazon Comprehend Medical** | NLP especializado para área médica | Saúde / NLP Médico |
+| **Amazon Transcribe Medical** | Transcrição especializada para área médica | Saúde / NLP Médico |
+| **AWS HealthScribe** | Gera documentação clínica estruturada a partir de conversas médico-paciente | Health AI / Generative AI |
+
+### 🎯 Dica Estratégica para Prova
+
+Agrupe mentalmente assim:
+
+- 📝 Texto → Comprehend / Translate
+- 🎤 Áudio → Transcribe
+- 🔊 Voz → Polly
+- 🖼 Imagem → Rekognition
+- 🤖 Chatbot → Lex
+- 📄 Documentos → Textract
+- 🔎 Busca → Kendra
+- 👨‍⚕️ Saúde → Comprehend Medical / Transcribe Medical / HealthScribe
+- 👥 Humano no loop → Mechanical Turk / A2I
+- 🎯 Recomendação → Personalize
+
+---
+
 ## Amazon Q
 
 | Serviço | Descrição Resumida | Domínio |
@@ -85,11 +121,12 @@ Listagem de todos os serviços AWS mencionados neste guia de estudos, organizado
 
 | Serviço | Descrição Resumida | Domínio |
 | :--- | :--- | :--- |
-| **Amazon OpenSearch Service** | Busca vetorial e semântica para RAG e embeddings | D3 |
-| **Amazon Aurora** | Banco relacional gerenciado com suporte a vetores | D3 |
-| **Amazon Neptune** | Banco de dados de grafos | D3 |
-| **Amazon DocumentDB** | Banco de dados de documentos compatível com MongoDB | D3 |
-| **Amazon RDS for PostgreSQL** | PostgreSQL gerenciado com extensão pgvector para vetores | D3 |
+| **Amazon OpenSearch Service** | Serviço gerenciado de busca e analytics com suporte nativo a vector search (kNN) | Search / Analytics |
+| **Amazon RDS (PostgreSQL + pgvector)** | Banco relacional com extensão pgvector para armazenar e consultar embeddings | Relacional (SQL) |
+| **Amazon S3 (S3 Vectors)** | Armazenamento de objetos com suporte a vetores e consulta por similaridade | Object Storage |
+| **Amazon Aurora PostgreSQL (pgvector)** | Banco relacional compatível com PostgreSQL com suporte a vetores via extensão | Relacional (SQL) |
+| **Amazon MemoryDB for Redis** | Banco em memória com suporte a vector search para aplicações de baixa latência | In-Memory / NoSQL |
+| **Amazon DocumentDB** | Banco de documentos compatível com MongoDB com suporte a busca vetorial | Document (NoSQL) |
 
 ---
 

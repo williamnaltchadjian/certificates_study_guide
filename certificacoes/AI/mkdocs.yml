@@ -50,9 +50,8 @@ markdown_extensions:
   - attr_list
 
 nav:
-  - Início: index.md
-  - 'Domínio 1: Fundamentos de IA e ML':
-      - IA & ML: Dominio_1_Fundamentos_IA_ML/1.Fundamentals_IA_Machine_Learning.md
+  - 'Resumo':
+      - IA: resumo.md
   - 'Domínio 2: IA Generativa':
       - Fundamentos: Dominio_2_Fundamentos_IA_Generativa/2.Fundamentos de ia generativa.md
       - Prompt Engineering: Dominio_2_Fundamentos_IA_Generativa/3.Prompt Enginnering.md
