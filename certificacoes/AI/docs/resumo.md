@@ -221,7 +221,7 @@ A AWS segue este fluxo lógico:
 | **5. Deployment** | Disponibilizar para o usuário |
 
 
-## When is ML Not Appropriate?
+## Quando não usar ML
 
 ML não é ideal quando:
 
@@ -641,5 +641,16 @@ Controlam a estrutura do modelo.
 
 ## Shadow Deployment
 
-O Shadow Deployment (ou "implantação sombra", "modo sombra" / dark launch) em Machine Learning é uma estratégia de MLOps na qual um novo modelo de IA é implantado em produção ao lado do modelo atual (ativo), mas sem interagir com os usuários finais. 
+| Aspecto | Descrição |
+| :--- | :--- |
+| **O que é** | Estratégia de MLOps onde novo modelo é implantado ao lado do atual, sem atender usuários |
+| **Objetivo** | Testar performance sem risco |
+| **Benefício** | Validação antes de exposure real |
+
+### Quando usar
+
+- Testar novos modelos em produção
+- Comparar performance com baseline
+- Validação de comportamento em tráfego real
+
 

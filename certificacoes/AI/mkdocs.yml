@@ -50,21 +50,9 @@ markdown_extensions:
   - attr_list
 
 nav:
-  - 'Resumo':
-      - IA: resumo.md
-  - 'Domínio 2: IA Generativa':
-      - Fundamentos: Dominio_2_Fundamentos_IA_Generativa/2.Fundamentos de ia generativa.md
-      - Prompt Engineering: Dominio_2_Fundamentos_IA_Generativa/3.Prompt Enginnering.md
-  - 'Domínio 3: Modelos de Base':
-      - Aplicação: Dominio_3_Aplicacoes_Modelos_Base/5.Aplicacao de Modelos de fundacao.md
-      - Serviços de IA: Dominio_3_Aplicacoes_Modelos_Base/6.Servicos de IA.md
-  - 'Domínio 4: IA Responsável':
-      - Diretrizes: Dominio_4_Diretrizes_IA_Responsavel/4.Responsibilities_AI.md
-  - 'Domínio 5: Sec., Conf. e Gov.':
-      - Segurança, Conformidade e Governança: Dominio_5_Seguranca_Conformidade_Governanca/1.Seguranca_Governanca.md
+  - Início: resumo.md
+  - Meu Resumo: meu_resumo.md
+  - Domínios AWS:
+      - Domínio 4 - IA Responsável: Dominios/4.Diretrizes de IA Responsável.md
   - Serviços AWS:
-      - Todos os Serviços: Servicos/services_aws.md
-      - Amazon Bedrock: Servicos/bedrock.md
       - Amazon SageMaker: Servicos/sagemaker.md
-      - Amazon Q Developer: Servicos/amazon_q_developer.md
-      - Outros Serviços: Servicos/outros.md
