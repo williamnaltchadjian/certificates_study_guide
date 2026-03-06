@@ -53,6 +53,15 @@ nav:
   - Início: resumo.md
   - Meu Resumo: meu_resumo.md
   - Domínios AWS:
-      - Domínio 4 - IA Responsável: Dominios/4.Diretrizes de IA Responsável.md
+      - "Domínio 1 - Fundamentos de IA e Machine Learning": Dominios/1.Fundamentals_IA_Machine_Learning.md
+      - "Domínio 2 - Fundamentos de IA Generativa": "Dominios/2.Fundamentos de ia generativa.md"
+      - "Domínio 3 - Prompt Engineering": "Dominios/3.Prompt Enginnering.md"
+      - "Domínio 4 - Diretrizes de IA Responsável": "Dominios/4.Diretrizes de IA Responsável.md"
+      - "Domínio 4 - Responsabilidades em IA": Dominios/4.Responsibilities_AI.md
+      - "Domínio 5 - Aplicação de Modelos de Fundação": "Dominios/5.Aplicacao de Modelos de fundacao.md"
+      - "Domínio 6 - Segurança e Governança": Dominios/6.Seguranca_Governanca.md
+      - "Todos os Serviços": Dominios/7.todos_os_servicos.md
+      - "Métricas": Dominios/8.Metricas.md
+      - "Algoritmos de ML": "Dominios/9.Algorimos de ML.md"
   - Serviços AWS:
       - Amazon SageMaker: Servicos/sagemaker.md
