@@ -32,7 +32,6 @@ theme:
     - navigation.tracking
     - navigation.instant
     - navigation.instant.progress
-    - toc.follow
     - search.highlight
     - search.suggest
     - search.share
@@ -51,7 +50,6 @@ markdown_extensions:
 
 nav:
   - Início: resumo.md
-  - Meu Resumo: meu_resumo.md
   - Domínios AWS:
       - "Domínio 1 - Fundamentos de IA e Machine Learning": Dominios/1.Fundamentals_IA_Machine_Learning.md
       - "Domínio 2 - Fundamentos de IA Generativa": "Dominios/2.Fundamentos de ia generativa.md"
@@ -60,8 +58,9 @@ nav:
       - "Domínio 4 - Responsabilidades em IA": Dominios/4.Responsibilities_AI.md
       - "Domínio 5 - Aplicação de Modelos de Fundação": "Dominios/5.Aplicacao de Modelos de fundacao.md"
       - "Domínio 6 - Segurança e Governança": Dominios/6.Seguranca_Governanca.md
-      - "Todos os Serviços": Dominios/7.todos_os_servicos.md
-      - "Métricas": Dominios/8.Metricas.md
-      - "Algoritmos de ML": "Dominios/9.Algorimos de ML.md"
+      - "Domínio 7 - Todos os Serviços": Dominios/7.todos_os_servicos.md
+      - "Domínio 8 - Métricas": Dominios/8.Metricas.md
+      - "Domínio 9 - Algoritmos de ML": "Dominios/9.Algorimos de ML.md"
+      - "Domínio 10 - Bedrock": Dominios/10.Bedrock
   - Serviços AWS:
       - Amazon SageMaker: Servicos/sagemaker.md
