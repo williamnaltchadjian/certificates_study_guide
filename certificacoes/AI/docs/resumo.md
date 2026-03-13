@@ -8,11 +8,9 @@ São modelos treinados em uma escala massiva de dados (terabytes de internet/liv
 
 ## o que  e overfitting  
 
-
 Modelo bom em treinamento mais pessimo em dados novos 
 Baixo Bias
 Alta variancia
-
                                                         
 ## o que e underfitting
 
@@ -31,6 +29,26 @@ mede **o quanto o modelo muda suas previsões quando recebe diferentes dados de 
 Mede **o erro causado por suposições simplificadas do modelo ao aprender os dados**                                    |
 | **Significado** | Indica **o quanto o modelo está distante do padrão real dos dados**                                                    |
 
+
+## ML Tradicional vs Deep Learning
+
+| Categoria | Termo em Inglês | ML Tradicional | Deep Learning |
+|---|---|---|---|
+| Complexidade de Tarefas | Task Complexity | Tarefas **bem definidas e mais simples** | Tarefas **complexas** |
+| Tipo de Dados | Data Type | Principalmente **dados estruturados e rotulados** | Trabalha bem com **dados não estruturados** (imagens, vídeo, texto) |
+| Metodologia | Methodology | Baseado em **estatística e modelos matemáticos** | Baseado em **redes neurais profundas** |
+| Features | Feature Engineering | **Seleção e extração manual** de features | **Features aprendidas automaticamente** pelo modelo |
+| Custo | Cost | **Menor custo computacional** | **Maior custo computacional** |
+
+
+## Tipos de Dados de Treinamento na AWS
+
+| Tipo de Dado | Termo em Inglês | Fonte na AWS | Exemplo |
+|---|---|---|---|
+| Estruturado | Structured Data | Amazon RDS / bancos SQL, depois armazenado no Amazon S3 | Informações de clientes em **tabelas relacionais** |
+| Semi-Estruturado | Semi-Structured Data | Amazon DynamoDB ou Amazon DocumentDB, depois armazenado no Amazon S3 | **Logs JSON** de atividade do usuário |
+| Não-Estruturado | Unstructured Data | Arquivos armazenados diretamente no Amazon S3 | **Imagens, vídeos, áudios e PDFs** |
+| Séries Temporais | Time-Series Data | Dados com **timestamp armazenados no Amazon S3** ou bancos especializados | **Dados de dispositivos IoT, métricas de sistema ou dados do mercado financeiro** |
 
 
 ## quais sao os tipos de aprendizado
@@ -108,14 +126,17 @@ Mede **o erro causado por suposições simplificadas do modelo ao aprender os da
 | Clusterização | Clustering | Usada para **encontrar padrões ocultos e organizar dados em grupos baseados em similaridade**, sem saber previamente quais são esses grupos. |
 
 
-## Quais sao as tecnicas de customizacao de um modelo
+## Técnicas de Customização de Modelos de IA
 
-| Técnica | Termo em Inglês | Descrição |
-|---|---|---|
-| Aprendizado em Contexto | In-Context Learning | O modelo utiliza **exemplos fornecidos no próprio prompt** para aprender como responder, sem necessidade de novo treinamento. |
-| Geração Aumentada por Recuperação | Retrieval-Augmented Generation (RAG) | Combina **recuperação de informações em bases externas** com geração de texto pelo modelo para produzir respostas mais precisas e atualizadas. |
-| Ajuste Fino | Fine-Tuning | Processo de **treinar novamente um modelo pré-treinado com dados específicos** para melhorar seu desempenho em uma tarefa ou domínio específico. |
-| Pré-treinamento | Pre-training | Fase inicial em que o modelo é **treinado com grandes volumes de dados gerais** para aprender padrões da linguagem antes de ser adaptado para tarefas específicas. |
+| Técnica | Termo em Inglês | Descrição | Quando Usar |
+|---|---|---|---|
+| Engenharia de Prompt | Prompt Engineering | Customização feita **apenas no prompt**, adicionando instruções, contexto ou exemplos (**few-shot prompting**) sem alterar os pesos do modelo. | Quando se quer **controlar respostas rapidamente sem treinar o modelo**. |
+| Ajuste Fino | Fine-Tuning | Treina um **modelo pré-treinado com um dataset menor e específico** para melhorar desempenho em uma tarefa. | Quando é necessário **adaptar o modelo a um domínio ou tarefa específica**. |
+| Ajuste Fino Eficiente em Parâmetros | Parameter-Efficient Fine-Tuning (PEFT) | Ajusta **apenas uma pequena parte dos parâmetros** do modelo, reduzindo custo computacional. | Quando se quer **customizar modelos grandes com menor custo**. |
+| Adaptação de Baixa Dimensão | Low-Rank Adaptation (LoRA) | Técnica de PEFT que **adiciona pequenas matrizes treináveis**, mantendo os pesos originais congelados. | Muito usado para **ajuste de LLMs com baixo custo**. |
+| Ajuste por Prefixo / Prompt | Prefix Tuning / Prompt Tuning | Aprende **prompts contínuos (vetores)** adicionados às camadas do modelo para direcionar comportamento. | Quando se quer **adaptar o modelo sem modificar seus pesos principais**. |
+| Geração Aumentada por Recuperação | Retrieval-Augmented Generation (RAG) | Conecta o modelo a **bases externas de conhecimento** para recuperar informações antes de gerar respostas. | Quando precisa usar **dados atualizados ou privados** e reduzir alucinações. |
+| Treinamento de Modelos Personalizados | Custom Model Training | Treinar modelos com **datasets específicos (texto ou imagens)** para aprender um **estilo, domínio ou entidade nova**. | Usado em **IA generativa personalizada**, como criação de estilos visuais ou conhecimento específico. |
 
 
 ## Quais sao as etapas do RAG
@@ -322,6 +343,15 @@ ML não é ideal quando:
 
 
 
+## Hiperparâmetros de Treinamento (Training Hyperparameters)
+
+| Hiperparâmetro | Termo em Inglês | Descrição | Observação |
+|---|---|---|---|
+| Época | Epoch | Número de **iterações completas sobre todo o conjunto de dados de treinamento**. | Mais épocas podem melhorar o aprendizado, mas podem causar **overfitting**. |
+| Tamanho do Lote | Batch Size | Quantidade de **amostras processadas antes de atualizar os pesos do modelo**. | Afeta **uso de memória e estabilidade do treinamento**. |
+| Taxa de Aprendizado | Learning Rate | Controla **o tamanho do passo na atualização dos pesos durante o treinamento**. | Taxa muito alta pode **não convergir**, muito baixa pode **tornar o treinamento lento**. |
+
+
 
 ## Quais sao os Princípios de IA Responsável
 
@@ -485,14 +515,13 @@ Quando escolher um modelo no Amazon Bedrock, considere:
 | **RLHF** | Humanos avaliam respostas e ajudam no alinhamento |
 
 
-## Quais sao as tecnicas de otimizacao de um modelo ?
+## Quais são as técnicas de otimização de um modelo?
 
-
-| Técnica | O que faz | Resultado | Trade-off |
-|---|---|---|---|
-| Pruning | Remove **pesos menos importantes** do modelo | Modelo **menor e mais rápido** | Pode ocorrer **pequena perda de precisão** |
-| Quantization | Reduz a **precisão numérica dos pesos** (ex: 32 bits → 8 bits) | **Menor uso de memória** e **inferência mais rápida** | Pode causar **leve perda de qualidade** |
-| Distillation | Treina um **modelo pequeno (student)** para imitar um **modelo grande (teacher)** | Modelo **menor, mais rápido e com menor custo** | Requer **processo adicional de treinamento** |
+| Técnica | O que faz | Resultado | Trade-off | Quando Usar |
+|---|---|---|---|---|
+| Pruning | Remove **pesos menos importantes** do modelo | Modelo **menor e mais rápido** | Pode ocorrer **pequena perda de precisão** | Quando o modelo é **muito grande** e precisa reduzir tamanho ou melhorar velocidade de inferência |
+| Quantization | Reduz a **precisão numérica dos pesos** (ex: 32 bits → 8 bits) | **Menor uso de memória** e **inferência mais rápida** | Pode causar **leve perda de qualidade** | Quando precisa rodar modelos em **hardware limitado** ou reduzir custo de inferência |
+| Distillation | Treina um **modelo pequeno (student)** para imitar um **modelo grande (teacher)** | Modelo **menor, mais rápido e com menor custo** | Requer **processo adicional de treinamento** | Quando deseja **manter boa performance**, mas com **modelo muito menor** |
 
 
 ### Comparação Rápida das Técnicas
@@ -522,6 +551,27 @@ Stable Diffusion é um modelo de IA generativa que produz imagens fotorrealistas
 ### Como o Stable Diffusion funciona?
 
 Como modelo de difusão, o Stable Diffusion difere de outros modelos de geração de imagens. Modelos de difusão usam ruído gaussiano para codificar uma imagem. Em seguida, usam um preditor de ruído junto com um processo de difusão reversa para recriar a imagem.
+
+
+
+## Modelos de Difusão (Diffusion Models)
+
+| Tipo | Termo em Inglês | Descrição | Quando Usar / Exemplos |
+|---|---|---|---|
+| Difusão Progressiva | Forward Diffusion | Adiciona **ruído gradualmente aos dados** até que a informação original seja destruída. | Etapa usada no **treinamento do modelo**, raramente utilizada diretamente. |
+| Difusão Reversa | Reverse Diffusion | Remove o ruído passo a passo para **reconstruir os dados originais**. | Usado para **geração e restauração de imagens**. |
+| Difusão Latente | Latent Diffusion | Executa o processo de difusão em um **espaço latente reduzido**, em vez de operar diretamente nos pixels. | Usado em modelos de geração de imagem como **Stable Diffusion, Midjourney e DALL-E**. |
+
+
+
+
+## Métodos de Busca (Search Methods)
+
+| Método de Busca | Termo em Inglês | Descrição | Quando Usar |
+|---|---|---|---|
+| Busca por Palavra-Chave | Keyword Search | Procura **correspondências exatas de termos** presentes na consulta. | Quando o usuário sabe **palavras específicas** ou códigos exatos. |
+| Busca Semântica | Semantic Search | Usa **embeddings e similaridade vetorial** para entender o **significado da consulta**. | Quando se quer encontrar **conteúdo relevante mesmo com palavras diferentes**. |
+
 
 
 ## Multimodal Search (Busca Multimodal)
@@ -624,3 +674,252 @@ Governança de IA significa definir políticas, processos e responsabilidades cl
 | **Amazon Macie** | Detectar PII automaticamente | Proteção de dados pessoais |
 | **AWS Artifact** | Acessar relatórios de compliance | Auditorias e certificações |
 | **Amazon GuardDuty** | Detecção de ameaças | Segurança da infraestrutura |
+
+
+
+
+## Mecanismos de Implantação do Bedrock
+
+| Conceito | Termo em Inglês | Descrição | Quando Usar |
+|---|---|---|---|
+| Inferência Sob Demanda | On-Demand Inference | Pagamento por uso baseado em **tokens processados**. | Ideal para **uso baixo, variável ou esporádico**. |
+| Throughput Provisionado | Provisioned Throughput | Capacidade **reservada e garantida** para execução do modelo. | Necessário para **modelos personalizados ou fine-tuned** e cargas de trabalho previsíveis. |
+| Agentes do Bedrock | Bedrock Agents | Permite criar **agentes que executam fluxos de trabalho multi-etapas**, integrando serviços como **Amazon Kendra e AWS Lambda**. | Quando a aplicação precisa **automatizar tarefas complexas com múltiplas ações**. |
+
+
+### Tipos de Instância para Implantação
+
+| Tipo de Instância | Características Principais | Casos de Uso Ideais |
+|---|---|---|
+| **Inf1** | Otimizado para inferência de deep learning com chips **AWS Inferentia** | Inferência de modelos de ML em larga escala com custo-benefício |
+| **P4** | GPUs **NVIDIA A100**, ideal para inferência de alto desempenho com **baixa latência** | Aplicações que exigem resposta em tempo real e alta performance |
+| **G5** | Projetado para cargas de trabalho de GPU com GPUs **NVIDIA** | Inferência geral de GPU, incluindo modelos de visão computacional |
+| **Graviton2 (C6g, M6g)** | Instâncias **ARM eficientes** para tarefas de inferência de propósito geral | Inferência de modelos de ML com foco em **eficiência energética e custo** |
+
+
+
+### Principais Funcionalidades do Bedrock
+
+| Funcionalidade | Descrição |
+|---|---|
+| **Escolha de Modelo (Model Choice)** | Acesso a FMs da AI21 Labs, Anthropic, Cohere, Meta, Mistral AI, Stability AI e Amazon. |
+| **Amazon Titan Models** | Modelos exclusivos do Bedrock criados pela AWS para ampla gama de casos de uso. |
+| **Personalização (Customization)** | Personaliza FMs com seus dados usando fine-tuning e RAG. |
+| **Avaliação de FM (Foundation Model Evaluation)** | Avalia e compara FMs com métricas como acurácia, robustez e toxicidade. |
+| **Bedrock Knowledge Bases** | Usa RAG para buscar dados de fontes privadas para respostas mais relevantes. |
+| **Bedrock Agents** | Cria agentes para fluxos de trabalho multi-etapas com sistemas e fontes de dados da empresa. |
+| **Serverless** | Elimina a necessidade de gerenciamento de infraestrutura. |
+| **GuardRails de Segurança (Security Guardrails)** | Restringe saídas inapropriadas e conteúdo sensível. |
+| **PartyRock** | Playground de construção de apps de IA generativa sem código, powered by Bedrock. |
+
+
+## AWS Glue
+
+| Componente | Termo em Inglês | Descrição | Função Principal |
+|---|---|---|---|
+| Serviço ETL do Glue | AWS Glue ETL Service | Serviço **ETL totalmente gerenciado** para extrair, transformar e carregar dados na nuvem. | Preparação e movimentação de dados entre diferentes fontes. |
+| Catálogo de Dados | AWS Glue Data Catalog | Repositório **centralizado de metadados** que armazena esquemas e informações sobre datasets. | Organizar e descobrir dados para analytics e machine learning. |
+| DataBrew | AWS Glue DataBrew | Ferramenta **visual de preparação de dados** que permite criar transformações sem código. | Limpeza de dados, transformação e criação de **recipes (receitas)** reutilizáveis. |
+| Qualidade de Dados | AWS Glue Data Quality | Ferramenta que **detecta anomalias e sugere regras de qualidade** para os dados. | Monitorar e garantir **qualidade e consistência dos dados**. |
+
+
+
+# Referência Rápida — Serviços AWS
+
+Listagem de todos os serviços AWS mencionados neste guia de estudos, organizados por categoria.
+
+!!! note
+    Este arquivo é gerado a partir da leitura consolidada de todos os domínios do guia de estudos (Domínio 1 ao 5) e dos arquivos de serviços.
+
+---
+
+## Amazon Bedrock
+
+| Serviço / Recurso | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon Bedrock** | Serviço gerenciado e serverless para construir aplicações de IA Generativa com Foundation Models | D2, D3 |
+| **Amazon Bedrock — Fine-Tuning** | Ajuste de modelos base com dados específicos da empresa | D3 |
+| **Amazon Bedrock — FM Evaluation** | Avaliação e comparação de Foundation Models antes da produção | D3 |
+| **Amazon Bedrock — Knowledge Bases** | Base de dados corporativa integrada ao Bedrock para RAG | D3 |
+| **Amazon Bedrock — Guardrails** | Controles de segurança e compliance para respostas do modelo | D3, D4 |
+| **Amazon Bedrock — Agents** | Agentes inteligentes para automação de tarefas multi-etapas | D3 |
+| **Amazon Nova** | Família de modelos proprietários da AWS (texto e multimodal) | D3 |
+
+---
+
+## Amazon SageMaker
+
+### Desenvolvimento
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon SageMaker Studio** | IDE completa para Machine Learning (notebooks, treino, deploy, debug) | D1 |
+| **Amazon SageMaker Canvas** | Plataforma no-code para criação de modelos ML | D1 |
+| **Amazon SageMaker JumpStart** | Modelos pré-treinados e Foundation Models prontos para uso | D1 |
+| **Amazon SageMaker Playgrounds** | Ambiente para testar prompts e inferência | D1 |
+
+### Preparação de Dados
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon SageMaker Ground Truth** | Rotulagem (labeling) de dados para treinamento | D1 |
+| **Amazon SageMaker Data Wrangler** | Exploração, limpeza e transformação de dados | D1 |
+| **Amazon SageMaker Feature Store** | Repositório centralizado para armazenar e reutilizar features | D1 |
+
+### Treinamento & Otimização
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon SageMaker Autopilot** | AutoML — automatiza criação e otimização de modelos | D1 |
+| **Amazon SageMaker Automatic Model Tuning** | Busca automática dos melhores hiperparâmetros | D1 |
+| **Amazon SageMaker Experiments** | Versionamento de treinos e rastreamento de métricas | D1 |
+
+### Deploy & MLOps
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon SageMaker Pipelines** | CI/CD para Machine Learning (automação do fluxo de ML) | D1, D4 |
+| **Amazon SageMaker Endpoints** | Inferência em produção (Real-Time, Serverless, Async, Batch) | D1 |
+| **Amazon SageMaker Edge Manager** | Gerenciamento de modelos em dispositivos edge (câmeras, robôs) | D1 |
+| **Amazon SageMaker Neo** | Otimização de modelos para diferentes hardwares | D1 |
+
+### Governança & Responsible AI
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon SageMaker Model Monitor** | Detecção de data drift e model drift em produção | D1, D4 |
+| **Amazon SageMaker Clarify** | Detecção de viés e explicabilidade das previsões | D1, D4, D5 |
+| **Amazon SageMaker Model Cards** | Documentação estruturada de modelo (métricas, riscos, uso) | D1, D4 |
+| **Amazon SageMaker Model Dashboard** | Painel centralizado para visualizar e monitorar vários modelos | D1 |
+| **Amazon SageMaker Role Manager** | Gerenciamento de permissões IAM simplificado | D1 |
+
+---
+
+SageMaker Hyperparameter Tuning: Executa várias versões do treinamento para encontrar a combinação ideal de configurações que maximiza a precisão.
+
+
+
+
+## Serviços de IA da AWS
+
+| Serviço / Recurso | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon Comprehend** | Serviço de NLP que extrai sentimentos, entidades, tópicos e insights de texto | Processamento de Linguagem Natural (NLP) |
+| **Amazon Translate** | Tradução automática neural de textos entre idiomas | NLP / Tradução |
+| **Amazon Transcribe** | Converte áudio em texto automaticamente | Speech-to-Text |
+| **Amazon Polly** | Converte texto em fala realista | Text-to-Speech |
+| **Amazon Rekognition** | Análise de imagens e vídeos (detecção de objetos, rostos, moderação) | Visão Computacional |
+| **Amazon Lex** | Criação de chatbots e assistentes conversacionais | IA Conversacional |
+| **Amazon Personalize** | Sistema de recomendação personalizado baseado em ML | Recomendação |
+| **Amazon Textract** | Extrai texto e dados estruturados de documentos | OCR / Document AI |
+| **Amazon Kendra** | Serviço de busca inteligente com NLP para documentos corporativos | Busca Inteligente |
+| **Amazon Mechanical Turk** | Marketplace para rotulagem de dados e tarefas humanas | Human-in-the-Loop |
+| **Amazon Augmented AI (A2I)** | Permite revisão humana em workflows de ML | Human-in-the-Loop |
+| **Amazon Comprehend Medical** | NLP especializado para área médica | Saúde / NLP Médico |
+| **Amazon Transcribe Medical** | Transcrição especializada para área médica | Saúde / NLP Médico |
+| **AWS HealthScribe** | Gera documentação clínica estruturada a partir de conversas médico-paciente | Health AI / Generative AI |
+
+### 🎯 Dica Estratégica para Prova
+
+Agrupe mentalmente assim:
+
+- 📝 Texto → Comprehend / Translate
+- 🎤 Áudio → Transcribe
+- 🔊 Voz → Polly
+- 🖼 Imagem → Rekognition
+- 🤖 Chatbot → Lex
+- 📄 Documentos → Textract
+- 🔎 Busca → Kendra
+- 👨‍⚕️ Saúde → Comprehend Medical / Transcribe Medical / HealthScribe
+- 👥 Humano no loop → Mechanical Turk / A2I
+- 🎯 Recomendação → Personalize
+
+---
+
+## Amazon Q
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon Q Business** | Assistente de IA corporativa com dados internos via RAG | Serviços |
+| **Amazon Q Apps** | Criação de aplicações GenAI sem código (no-code) | Serviços |
+| **Amazon Q Developer** | Assistente de IA para desenvolvedores integrado à IDE | Serviços |
+| **Amazon Q for AWS Services** | Assistente inteligente dentro do Console AWS | Serviços |
+| **PartyRock** | Plataforma experimental para criar e testar apps GenAI | Serviços |
+
+---
+
+## Bancos de Dados e Armazenamento Vetorial
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon OpenSearch Service** | Serviço gerenciado de busca e analytics com suporte nativo a vector search (kNN) | Search / Analytics |
+| **Amazon RDS (PostgreSQL + pgvector)** | Banco relacional com extensão pgvector para armazenar e consultar embeddings | Relacional (SQL) |
+| **Amazon S3 (S3 Vectors)** | Armazenamento de objetos com suporte a vetores e consulta por similaridade | Object Storage |
+| **Amazon Aurora PostgreSQL (pgvector)** | Banco relacional compatível com PostgreSQL com suporte a vetores via extensão | Relacional (SQL) |
+| **Amazon MemoryDB for Redis** | Banco em memória com suporte a vector search para aplicações de baixa latência | In-Memory / NoSQL |
+| **Amazon DocumentDB** | Banco de documentos compatível com MongoDB com suporte a busca vetorial | Document (NoSQL) |
+
+---
+
+## Segurança, Identidade e Conformidade
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **AWS IAM** | Controle de identidade e acesso — quem acessa o quê na AWS | D4, D5 |
+| **AWS KMS** | Gerenciamento de chaves de criptografia de dados | D5 |
+| **Amazon Macie** | Descoberta de dados sensíveis (PII) no S3 usando ML | D5 |
+| **AWS Config** | Monitoramento de configurações e conformidade de recursos | D5 |
+| **Amazon Inspector** | Scanner automático de vulnerabilidades em instâncias e containers | Serviços |
+| **AWS CloudTrail** | Log de auditoria de todas as chamadas de API da conta | D5 |
+| **AWS Artifact** | Portal de relatórios de conformidade (ISO, PCI, SOC, HIPAA) | D5 |
+| **AWS Audit Manager** | Gestão de riscos e auditoria contínua | Serviços |
+| **AWS Trusted Advisor** | Consultor para reduzir custos e aumentar segurança e performance | Serviços |
+| **Amazon GuardDuty** | Detecção de ameaças e comportamentos maliciosos | D5 |
+
+---
+
+## IA Responsável e Revisão Humana
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon Augmented AI (A2I)** | Revisão humana de previsões de ML (human-in-the-loop) | D5 |
+
+---
+
+## Armazenamento
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon S3** | Armazenamento de objetos escalável, seguro e durável | D5 |
+| **Amazon S3 Glacier** | Arquivo de longo prazo com custo baixo | Serviços |
+| **Amazon S3 Intelligent-Tiering** | Movimentação automática entre classes por padrão de acesso | Serviços |
+
+---
+
+## Computação
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon EC2** | Servidores virtuais na nuvem com controle total do SO | Serviços |
+| **AWS Lambda** | Execução serverless de código em resposta a eventos | Serviços |
+
+---
+
+## Monitoramento e Observabilidade
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **Amazon CloudWatch** | Monitoramento de uso, latência, erros e criação de alarmes | D5 |
+
+---
+
+## Networking e Conectividade
+
+| Serviço | Descrição Resumida | Domínio |
+| :--- | :--- | :--- |
+| **VPC Endpoint** | Conecta rede privada aos serviços AWS de forma isolada | Serviços |
+| **AWS PrivateLink** | Conectividade privada entre VPCs e redes on-premises | Serviços |
+| **S3 Gateway Endpoint** | Acesso gratuito ao S3 para redes privadas sem NAT Gateway | Serviços |
+
+---
+
